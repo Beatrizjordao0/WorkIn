@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500:600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+}
+
+header .barra_de_navegacao {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.barra_de_navegacao .logo_marca {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.barra_de_navegacao .links_barra {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.barra_de_navegacao a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease;
+    list-style: none;
+}
+
+.barra_de_navegacao a:hover {
+    color: #1e90ff;
+}
+
+.barra_de_navegacao .links_barra li.login a:not(:hover) {
+    background-color: #fff; 
+    color: #000;
+    border-radius: 9px; 
+    padding: 5px 20px;
+}
+
+.barra_de_navegacao .links_barra li.login a:hover {
+    background-color: #1e90ff; 
+    border-radius: 9px; 
+    color: #ffff; 
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 98vh;
+    color: white; /* Texto em branco para contraste */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+  
+#section1 {
+    background-image: url("./img/image1.jpg");
+}
+
+.parallax-container {
+    position: relative; /* Para posicionar as camadas dentro do container */
+    overflow: hidden; /* Ocultar qualquer transbordamento das camadas */
+}
+  
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#textoMain {
+    margin-bottom: 50%;
+}
+
+.textos{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.textos .div_primaria{
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.textos .div_primaria h1{
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.textos .div_primaria p{
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+.textos .div_primaria button{
+    background-color: #fff; 
+    border-radius: 9px; 
+    font-weight: 300;
+    margin-top: 30px;
+    border: none;
+    color: #000; 
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.textos .div_primaria button:hover{
+    background-color: #1e90ff; 
+    padding: 15px 40px;
+}
+
+.sobre{
+    background-color: #FFC0CB;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.sobre .div-secundaria{
+    color: #000;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sobre .div-secundaria h1{
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.sobre .div-secundaria p{
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+.contato{
+    background-color: #ADD8E6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.contato .div-treceira{
+    color: #000;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contato .div-treceira h1{
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.contato .div-treceira p{
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(224, 127, 127); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+
+@media only screen and (max-width: 768px) {
+    .barra_de_navegacao .links_barra li:not(.login) {
+        display: none; 
+    }
+}
