@@ -14,20 +14,18 @@ body {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
     z-index: 1;
+    height: 2vh;
 }
 
 header .barra_de_navegacao {
     display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: space-between;
+    background-color: #1E1E49;
+}
+
+.inv {
+    background-color: transparent;
+    height: 7vh;
 }
 
 .barra_de_navegacao .logo_marca {
@@ -36,20 +34,19 @@ header .barra_de_navegacao {
 }
 
 .barra_de_navegacao .links_barra {
-    display: flex;
     gap: 40px;
     list-style: none;
 }
 
 .barra_de_navegacao a {
-    color: #fff;
+    color: #FDFAF3;
     text-decoration: none;
     transition: 0.2s ease;
     list-style: none;
 }
 
 .barra_de_navegacao a:hover {
-    color: #1e90ff;
+    color: #d7d5d1;
 }
 
 .barra_de_navegacao .links_barra li.login a:not(:hover) {
@@ -68,12 +65,44 @@ header .barra_de_navegacao {
     cursor: pointer;
 }
 
+.inv2 {
+    background-color: transparent;
+    height: 10vh;
+}
+
+.inv3 {
+    background-color: transparent;
+    height: 30vh;
+}
+
+#textoMain h1 {
+    margin-left: 2.5%;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 36px;
+    color: #FDFAF3;
+}
+
+#textoMain1 h1 {
+    margin-left: 1.5%;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 18px;
+    font-size: 30px;
+    color: #FDFAF3;
+}
+
+#textoMain p {
+    font-family: "Josefin Sans", sans-serif;
+    color: #E1D8D0;
+}
+
 .parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 98vh;
+    max-height: 90vh;
     color: white; /* Texto em branco para contraste */
     display: flex;
     align-items: center;
@@ -82,7 +111,7 @@ header .barra_de_navegacao {
 }
   
 #section1 {
-    background-image: url("./img/image1.jpg");
+    background-image: url("./index.jpg");
 }
 
 .parallax-container {
@@ -100,7 +129,7 @@ header .barra_de_navegacao {
 }
 
 #textoMain {
-    margin-bottom: 50%;
+    margin-bottom: 20%;
 }
 
 .textos{
