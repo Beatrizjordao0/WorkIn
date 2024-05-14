@@ -5,7 +5,7 @@ const chatHistory = document.querySelector('.chat-history');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Access your API key as an environment variable (see "Set up your API key" above)
-const genAI = new GoogleGenerativeAI("AIzaSyBCVK1OC5pYomKkEiX078N--2qzEsOls9o");
+const genAI = new GoogleGenerativeAI("");
 
 async function run() {
   // For text-only input, use the gemini-pro model
