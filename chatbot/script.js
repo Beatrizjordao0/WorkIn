@@ -24,7 +24,7 @@ function appendMessage(sender, message) {
 
 async function fetchResponse(message) {
   // Substitua "YOUR_API_KEY" pela sua chave da API do Google Gemini
-  const apiKey = 'AIzaSyBCVK1OC5pYomKkEiX078N--2qzEsOls9o';
+  const apiKey='';
   const apiEndpoint = `https://generativelanguage.googleapis.com/v1beta2/models/gemini-pro:generateContent?key=${apiKey}`;
 
   const requestBody = {
