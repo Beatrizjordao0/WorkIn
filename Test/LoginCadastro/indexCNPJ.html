@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkIn | Login & Cadastro</title>
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Container do Formulário -->
+    <div class="form-container">
+        <div class="col col-1">
+            <div class="image-layer">
+                <img src="assets/img/white-outline.png" class="form-image-main">
+                <img src="assets/img/dots.png" class="form-image dots">
+                <img src="assets/img/coin.png" class="form-image coin">
+                <img src="assets/img/spring.png" class="form-image spring">
+                <img src="assets/img/rocket.png" class="form-image rocket">
+                <img src="assets/img/cloud.png" class="form-image cloud">
+                <img src="assets/img/stars.png" class="form-image stars">
+            </div>
+            <p class="featured-words"> A <span>WorkIn</span> coloca você a poucos minutos de encontrar os melhores talentos para sua empresa.</p>
+        </div>
+        <div class="col col-2">
+            <div class="btn-box">
+                <button class="btn btn-1" id="login">Entrar</button>
+                <button class="btn btn-2" id="register">Cadastrar</button>
+            </div>
+            <!-- Container do Formulário de Login -->
+            <div class="login-form">
+                <div class="form-title">
+                    <span>Entrar</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="text" class="input-field" id="login-email" placeholder="CNPJ" required>
+                        <i class="bx bx-buildings icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" id="login-password" placeholder="Senha" required>
+                        <i class="bx bx-lock-alt icon"></i>
+                    </div>
+                    <div class="forgot-pass">
+                        <a href="#" onclick="resetPassword()">Esqueceu a Senha?</a>
+                    </div>
+                    <div class="input-box">
+                        <button class="input-submit" onclick="loginUser()">
+                            <span>Entrar</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Container do Formulário de Cadastro -->
+            <div class="register-form">
+                <div class="form-title">
+                    <span>Criar Conta Jurídica</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="text" class="input-field" id="registro-username" placeholder="Nome da Empresa" required>
+                        <i class="bx bx-user icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" id="registro-email" placeholder="Email" required>
+                        <i class="bx bx-envelope icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" id="registro-password" placeholder="Senha" required>
+                        <i class="bx bx-lock-alt icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" id="registro-telefone" placeholder="Telefone" required>
+                        <i class="bx bx-phone icon"></i> 
+                    </div>
+                    <div class="input-box">
+                        <div class="form-inputs">
+                    <div class="form-inputs">
+                        <div class="input-box">
+                            <input type="text" class="input-field" id="registro-username" placeholder="CNPJ" required>
+                            <i class="bx bx-buildings icon"></i>
+                        </div>
+                        <button class="input-submit" onclick="registerUser()">
+                            <span>Cadastrar</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <!-- JS -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

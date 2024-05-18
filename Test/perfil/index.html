@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Workin - Perfil</title>
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylePerfil.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/3da44e21a2.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    </head>
+
+    <link rel="shortcut icon" href="img/img/bLogo.png" type="image/x-icon">
+    
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body onload="load()">
+    <!-- <header class="container-fluid bg-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#Home" class="logo_marca nav-brand  ms-5">WorkIn</a>
+                <img src="logo.png" alt="Workin Logo" height="30"> 
+            </a>
+            <nav class="nav">
+                <a href="#" class="nav-link">Vagas</a>
+                <a href="#" class="nav-link">Empresas</a>
+                <a href="#" class="nav-link">Sobre</a>
+            </nav>
+            <div>
+                <button class="btn btn-outline-primary mr-2">Entrar</button>
+                <button class="btn btn-primary">Cadastrar</button>
+            </div>
+        </div>
+    </header> -->
+    <header>
+        <div class="container-fluid d-flex" id="nav-container">
+            <nav class="barra_de_navegacao fixed-top navbar d-flex justify-content-between">
+                <a href="../index.html" class="logo_marca nav-brand ms-5">WorkIn</a>
+                <div class="me-5">
+                    <a href="#vagas" class="vagas ms-2">Vagas</a>
+                    <a href="#empresas" class="empresas ms-2">Empresas</a>
+                    <a href="#sobre" class="sobre ms-2">Sobre</a>
+                    <a class="login ms-2" href="../LoginCadastro/index.html" id="login">Login</a>
+                    <!-- <<button id="btnTst">OI</button> -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assets/img/default-profile.jpg" alt="Foto de Perfil" class="card-img-top profile-pic mx-auto" data-toggle="modal" data-target="#profilePicModal"> 
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <h5 class="card-title" id="profileName">Nome de Usuário:</h5> 
+                              <i class="fas fa-edit ml-2" data-toggle="modal" data-target="#editProfileModal"></i> 
+                        </div> 
+                        <p class="card-text" id="profileDescription">Breve descrição sobre você e suas áreas de interesse.</p> 
+                        <ul class="list-unstyled"> 
+                          <li>
+                            <i class="fas fa-map-marker-alt mr-2"></i> 
+                            <span id="profileCity">Cidade, Estado</span> 
+                          </li> 
+                          <li>
+                            <i class="fas fa-envelope mr-2"></i> 
+                            <span id="profileEmail">contato@email.com</span>
+                          </li> 
+                        </ul> 
+                        <a href="#" class="btn btn-primary btn-block mt-3" data-toggle="modal" data-target="#editProfileModal">Editar Perfil</a> 
+                      </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="card mb-3">
+                    <img src="../perfil/assets/img/default-banner.jpg.jpg" alt="Banner de Perfil" class="card-img-top profile-banner" data-toggle="modal" data-target="#profileBannerModal">
+                    <div class="banner-overlay">
+                        <i class="fas fa-camera"></i> 
+                      </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Sobre</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Escreva aqui uma breve biografia sobre você, suas experiências, habilidades e o que busca em uma oportunidade de trabalho. Destaque suas qualificações e como elas podem agregar valor às empresas.</p>
+                        <hr>
+                        <h4>Experiência</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <h5>Nome da Empresa</h5>
+                                <p>Cargo - Período (ex: Jan 2020 - Dez 2022)</p>
+                                <p>Descreva suas principais responsabilidades e realizações neste cargo.</p>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h4>Educação</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <h5>Nome da Instituição</h5>
+                                <p>Curso - Ano de Conclusão</p>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h4>Habilidades</h4>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><span class="badge badge-secondary">Habilidade 1</span></li>
+                            <li class="list-inline-item"><span class="badge badge-secondary">Habilidade 2</span></li>
+                        </ul>
+                        <hr>
+                        <h4>Acessibilidade</h4>
+                        <p>Informe aqui as suas necessidades de acessibilidade para que as empresas estejam cientes e preparadas para te receber da melhor maneira possível.</p>
+                        <div id="sair">
+                            <btn onclick="deslogar()" class="deslogar bi-box-arrow-left" id="deslogar"></btn>
+                            <h3 class="deslogar" id="deslogarTexto">Deslogar</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   <!-- Modal para editar o perfil --> 
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true"> 
+    <div class="modal-dialog" role="document"> 
+      <div class="modal-content"> 
+        <div class="modal-header"> 
+          <h5 class="modal-title" id="editProfileModalLabel">Editar Perfil</h5> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"> 
+            <span aria-hidden="true">×</span> 
+          </button> 
+        </div> 
+        <div class="modal-body"> 
+            <div class="form-group">
+                <label for="newName">Nome de Usuário:</label>
+                <input type="text" class="form-control" id="newName" placeholder="Nome do Usuário"> 
+            </div>
+            <div class="form-group">
+                <label for="newDescription">Descrição:</label>
+                <textarea class="form-control" id="newDescription" placeholder="Breve descrição sobre você e suas áreas de interesse."></textarea>
+            </div>
+          <div class="form-group">
+            <label for="newCity">Cidade, Estado:</label>
+            <input type="text" class="form-control" id="newCity" placeholder="Cidade, Estado"> 
+        </div>
+        <div class="form-group">
+            <label for="newEmail">Email:</label>
+            <input type="email" class="form-control" id="newEmail" placeholder="contato@email.com">
+        </div>
+        </div> 
+        <div class="modal-footer"> 
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button> 
+          <button type="button" class="btn btn-primary" id="saveProfileBtn">Salvar</button> 
+        </div> 
+      </div> 
+    </div> 
+  </div>
+  <!-- Modal para editar a foto de perfil -->
+<div class="modal fade" id="profilePicModal" tabindex="-1" role="dialog" aria-labelledby="profilePicModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profilePicModalLabel">Alterar Foto de Perfil</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body"> 
+                <p>Escolha uma nova foto de perfil:</p>
+                <input type="file" class="form-control-file" id="profilePicUpload"> 
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="saveProfilePicBtn">Salvar</button> 
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal para editar o banner de perfil -->
+<div class="modal fade" id="profileBannerModal" tabindex="-1" role="dialog" aria-labelledby="profileBannerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileBannerModalLabel">Alterar Banner de Perfil</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">×</span> 
+                </button>
+            </div>
+            <div class="modal-body"> 
+                <p>Escolha um novo banner de perfil:</p>
+                <input type="file" class="form-control-file" id="profileBannerUpload" accept="image/*">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button> 
+                <button type="button" class="btn btn-primary" id="saveBannerBtn">Salvar</button> 
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal para editar o nome do usuário -->
+    <div class="modal fade" id="editNameModal" tabindex="-1" role="dialog" aria-labelledby="editNameModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editNameModalLabel">Editar Nome</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <!-- <span aria-hidden="true">×</span> -->
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="profileNameInput" placeholder="Novo nome de usuário">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="saveNameBtn">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid bg-light py-3 mt-5">
+        <div class="container text-center">
+            <p>© 2024 Workin. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+        <script src="scriptperfil.js" type="module"></script>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+        <script defer>
+
+
+            const firebaseConfig = {
+            apiKey: "AIzaSyA3gOHi9Q6aHQ5seN5S9bbNmQpPQFMGXFs",
+            authDomain: "magnus-c4b38.firebaseapp.com",
+            projectId: "magnus-c4b38",
+            storageBucket: "magnus-c4b38.appspot.com",
+            messagingSenderId: "458576341456",
+            appId: "1:458576341456:web:6117f4a9160b8667b8f1d5"
+            };
+
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+
+            let btn = document.getElementById("btnTst")
+
+
+            btn.addEventListener("click", click)
+
+            
+
+            // function click() {
+            //     const db = firebase.firestore();
+
+            //     let profName = document.getElementById("profileName")
+            //     // profName.textContent = "A"
+            //     // console.log(profName)
+            //     firebase.auth().onAuthStateChanged(user => {
+            //     if (user) {
+            //         var usuariosLista = db.collection('users').doc(user.uid);
+
+            //         usuariosLista.get().then((doc) => {
+            //         if (doc.exists) {
+            //             const userData = doc.data()
+            //             const nome = userData.username
+
+            //             profName.textContent = nome
+
+            //             console.log("Document data:", doc.data());
+            //         } else {
+            //             // doc.data() will be undefined in this case
+            //             console.log("No such document!");
+            //         }
+            //     }).catch((error) => {
+            //         console.log("Error getting document:", error);
+            //     });
+
+            //         db.collection('users').doc(user.uid).set({
+            //             username: profName,
+            //         })
+            //     // Usuário está logado!
+            //     console.log("Usuário logado:", user.uid);
+            //     // Faça o que você precisa, por exemplo:
+            //     // - Redirecione para a página home
+            //     // - Exiba o nome do usuário
+            //     // - Habilite conteúdo restrito
+            //     } else {
+            //     // Usuário não está logado
+            //     console.log("Usuário não está logado.");
+            //     // Faça o que você precisa, por exemplo:
+            //     // - Redirecione para a página de login
+            //     // - Desabilite conteúdo restrito
+            //     }
+            // });
+            // }
+
+            let unlog = document.getElementById("deslogar")
+
+
+            // unlog.addEventListener("click", deslogar)
+
+
+            function deslogar() {
+                 firebase.auth().signOut().then(() => {
+                     // Sign-out successful.
+                     console.log("Deslogado com sucesso!");
+                     window.location.href = "../index.html";
+                     }).catch((error) => {
+                         // An error happened.
+                         console.log("Erro ao deslogar:", error);
+                         });
+            }
+
+            function load() {
+                let unlog = document.getElementById("deslogar")
+
+                let profName = document.getElementById("profileName")
+                let profNameChange = document.getElementById("newName")
+                let profDescription = document.getElementById("profileDescription")
+                let profDescriptionChange = document.getElementById("newDescription")
+                let profCity = document.getElementById("profileCity")
+                let profCityChange = document.getElementById("newCity")
+                let profEmail = document.getElementById("profileEmail")
+                let profEmailChange = document.getElementById("newEmail")
+
+                let deslogar = document.getElementById("deslogar")
+
+                // profName.textContent = "A"
+                // console.log(profName)
+
+
+                firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    
+                    var usuariosLista = db.collection('users').doc(user.uid);
+
+                    usuariosLista.get().then((doc) => {
+                    if (doc.exists) {
+                        const userData = doc.data()
+                        const nome = userData.username
+                        const description = userData.description
+                        const city = userData.city
+                        const email = userData.email
+
+                        profName.textContent = nome
+                        profNameChange.value = nome
+
+                        profDescription.textContent = description
+                        profDescriptionChange.value = description
+                        
+
+                        profCity.textContent = city
+                        profCityChange.value = city
+
+                        profEmail.textContent = email
+                        profEmailChange.value = email
+
+                        console.log("Document data:", doc.data());
+                    } else {
+                        // doc.data() will be undefined in this case
+                        console.log("No such document!");
+                    }
+                }).catch((error) => {
+                    console.log("Error getting document:", error);
+                });
+
+                    db.collection('users').doc(user.uid).set({
+                        username: profName,
+                    })
+                // Usuário está logado!
+                console.log("Usuário logado:", user.uid);
+                // Faça o que você precisa, por exemplo:
+                // - Redirecione para a página home
+                // - Exiba o nome do usuário
+                // - Habilite conteúdo restrito
+                } else {
+                    let login = document.getElementById("login")
+
+                    login.style.display = "inline"
+                // Usuário não está logado
+                console.log("Usuário não está logado.");
+                // Faça o que você precisa, por exemplo:
+                // - Redirecione para a página de login
+                // - Desabilite conteúdo restrito
+                }
+            });
+            }
+
+
+            
+
+                
+
+        </script>
+    
+</body>
+</html>
