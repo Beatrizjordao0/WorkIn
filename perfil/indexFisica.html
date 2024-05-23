@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqk1w27APbCmnBmcLm/iUWLdk6DYuY/vYf2oQS45K/aQGwfqP/Bm4U+kM+N/4PAknZkd2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/stylePerfilF.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/3da44e21a2.js" crossorigin="anonymous"></script>
+    <script src="js/progressbar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Estilos do card inspirado no seu código de login -->
+    <style>
+        
+    </style>
+
+</head>
+<body id="corpo" onload="load()">
+
+    <div class="container">
+        <div class="row flex-lg-nowrap">
+          
+        
+          <div class="col">
+            <div class="row">
+              <div class="col mb-3">
+                <div class="card"> 
+                  <div class="card-body">
+                    <div id="userBanner"><i class="bi bi-images"></i></div>
+                    <input type="file" accept="image/*" id="uploadBanner" style="display: none;">
+                    <div class="e-profile">
+                      <div class="row" id="userData">
+
+
+                        <div class="col-12 col-sm-auto mb-3">
+
+
+
+
+
+                          <div class="mx-auto" style="width: 140px;">
+                            <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; ">
+                              
+                              <div class="border rounded-circle" id="profilePic"></div>
+                              
+                            </div>
+                          </div>
+                        </div>
+
+                        <button id="imageSelector" class="btn btn-primary" type="button">
+                          <i class="fa fa-fw fa-camera"></i>
+
+                          <span><label type="button" class="" id="ver-mais">Alterar Foto</label></span>
+                          
+                          <input id="inputImage" type="file" accept="image/jpeg, image/jpg, image/png">
+                          <!-- <img src="img/profile.jpg" alt="Perfume 1" class="card-img-top" id="profilePic">
+                          <label type="button" class="btn btn-danger position-absolute w-100 rounded-0" id="ver-mais">MODIFICAR IMAGEM</label>
+                          <input id="inputImage" type="file" accept="image/jpeg, image/jpg, image/png"> -->
+                        </button>
+                       
+                       
+                       
+                        <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3" id="userInfo">
+                          <div class="text-center text-sm-left mb-2 mb-sm-0">
+                            <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap" id="profileName">Nome</h4>
+                            <p class="mb-0" id="profileUser">@Usuário</p>
+                            <!-- <div class="text-muted"><small>Visto pela última vez há 1 minuto</small></div> -->
+                            <div class="mt-2">
+
+                            </div>
+                          </div>
+                          <div class="text-center text-sm-right">
+                            <span class="badge badge-secondary">Pessoa Fisica</span>
+                            <div class="text-muted"><small id="quandoEntrou"><!--Entrou em 15 de Maio 2024--></small></div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                      <ul class="nav nav-tabs">
+                        <li class="nav-item"><a href="#" class="active nav-link" id="configuracoes-tab">Configurações</a></li>
+                        <li class="nav-item"><a href="#" class="active nav-link" id="configuracoes-adicionais-tab">Configurações Adicionais</a></li>
+                      </ul>
+
+                      <!-- começo do conteudo "configuraçoes" -->
+
+                      
+                      <div id="configuracoes-content" class="tab-content pt-3">
+                        <div class="tab-pane active">
+                          <form class="form" novalidate="">
+                            <div class="row">
+                              <div class="col">
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Nome Completo</label>
+                                      <input id="newName" class="form-control" type="text" name="name" placeholder="Nome Completo" value="">
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Nome de Usuário</label>
+                                      <input id="newUser" class="form-control" type="text" name="username" placeholder="Usuario" value="">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Email de Contato</label>
+                                      <input id="newEmail" class="form-control" type="text" placeholder="seuemail@gmail.com">
+                                      <div id="emailMessage">
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col mb-3">
+                                    <div class="form-group">
+                                      <label>Sobre</label>
+                                      <textarea id="newDescription" class="form-control" rows="5" placeholder="Minha Bio"></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- <div class="row">
+                              <div class="col-12 col-sm-6 mb-3">
+                                <div class="mb-2"><b>Alterar Senha</b></div>
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Senha Atual</label>
+                                      <input class="form-control" type="password" placeholder="••••••">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Nova Senha</label>
+                                      <input class="form-control" type="password" placeholder="••••••">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Confirmar <span class="d-none d-xl-inline">Senha</span></label>
+                                      <input class="form-control" type="password" placeholder="••••••"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-5 offset-sm-1 mb-3">
+                                <div class="mb-2"><b>Mantendo Contato</b></div>
+                                <div class="row">
+                                  <div class="col">
+                                    <label>Notificações por Email</label>
+                                    <div class="custom-controls-stacked px-2">
+                                      <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="notifications-blog" checked="">
+                                        <label class="custom-control-label" for="notifications-blog">Novas vagas</label>
+                                      </div>
+                                      <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="notifications-news" checked="">
+                                        <label class="custom-control-label" for="notifications-news">Ultimas noticias</label>
+                                      </div>
+                                      <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="notifications-offers" checked="">
+                                        <label class="custom-control-label" for="notifications-offers">Promoçoes</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> -->
+
+
+
+
+
+
+                            <div class="row">
+                              <div class="col d-flex justify-content-end">
+                                <button id="saveProfileBtn" class="btn btn-primary" type="button">Salvar Alterações</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <!-- fim do conteudo "configuraçoes" -->
+
+                      <!-- inicio do conteudo "configuraçoes adicionais" -->
+
+                      <div id="configuracoes-adicionais-content" class="tab-content pt-3">
+                        <div class="tab-pane active" id="basico">
+                          <form class="form" novalidate="">
+                            <div class="row">
+                              <div class="col">
+                                <div class="row">
+                                  <!-- <div class="col">
+                                      <div class="form-group">
+                                      <label>Nome Completo</label>
+                                      <input disabled id="newName2" class="form-control" type="text" name="name" placeholder="Nome Completo" value="">
+                                    </div>
+                                  </div> -->
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Pronomes</label>
+                                      <input id="newPronouns" class="form-control" type="text" name="pronouns" placeholder="Pronomes" value="">
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Etnia</label>
+                                      <input id="newEtnia" class="form-control" type="text" name="etnia" placeholder="Etnia" value="">
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <div class="row">
+                                  
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Nível de Graduação</label>
+                                      <select id="newGraduationLevel" class="form-control">
+                                        <option value="">Selecione</option>
+                                        <option value="Ensino Fundamental">Ensino Fundamental</option>
+                                        <option value="Ensino Médio">Ensino Médio</option>
+                                        <option value="Graduação">Graduação</option>
+                                        <option value="Pós-Graduação">Pós-Graduação</option>
+                                        <option value="Mestrado">Mestrado</option>
+                                        <option value="Doutorado">Doutorado</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <label>Cursos Graduados</label>
+                                      <textarea id="newGraduatedCourses" class="form-control" rows="3" placeholder="Cursos Graduados"></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col mb-3">
+                                    <div class="form-group">
+                                      <label>Habilidades</label>
+                                      <textarea id="newSkills" class="form-control" rows="3" placeholder="Habilidades (ex: Python, Marketing Digital, Design)"></textarea>
+                                    </div>
+                                  </div>
+                                  <div class="col mb-3">
+                                    <div class="form-group">
+                                      <label>Interesses</label>
+                                      <textarea id="newInterests" class="form-control" rows="3" placeholder="Interesses (ex: Tecnologia, Educação, Meio Ambiente)"></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      
+                            <div class="row">
+                              <div class="col-12 col-sm-6 mb-3">
+                                <div class="tab-pane" id="avancado">
+                                  <h5 class="mb-3">Experiência Profissional</h5>
+                                  <small class="text-muted mb-3">Insira apenas a experiência mais relevante para a vaga que você está buscando.</small> 
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label>Cargo</label>
+                                        <input id="newJobTitle" class="form-control" type="text" name="jobTitle" placeholder="Ex: Analista de Marketing" value="">
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label>Empresa</label>
+                                        <input id="newCompany" class="form-control" type="text" name="company" placeholder="Ex: Empresa XPTO" value="">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label>Período</label>
+                                        <input id="newJobPeriod" class="form-control" type="text" name="jobPeriod" placeholder="Ex: 2020-2022" value="">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label>Descrição das atividades</label>
+                                        <textarea id="newJobDescription" class="form-control" rows="3" placeholder="Detalhe suas responsabilidades e projetos"></textarea>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                      
+                              <div class="col-12 col-sm-5 offset-sm-1 mb-3">
+                                <div class="tab-pane" id="avancado">
+                                  <h5 class="mb-3">Vinculo com Redes Sociais</h5>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label>Inserir/Alterar URL do perfil do Linkedin</label>
+                                        <input id="newLinkedinUrl" class="form-control" type="url" name="linkedinUrl" placeholder="https://www.linkedin.com/in/seu-perfil" value="">
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group">
+                                        <label>Inserir/Alterar URL do perfil do Github</label>
+                                        <input id="newGithubUrl" class="form-control" type="url" name="githubUrl" placeholder="https://github.com/seu-perfil" value="">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      
+                            
+                      
+                            <div class="row">
+                              <div class="col d-flex justify-content-end">
+                                <button id="saveProfileBtn2" class="btn btn-primary" type="button">Salvar Alterações</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                                  
+  
+                        <!-- fim do conteudo "configuraçoes adicionais" -->
+
+
+
+
+
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-12 col-md-3 mb-3">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="px-xl-3">
+                      <button id="unlog" class="btn btn-block btn-danger">
+                        <i class="fa fa-sign-out"></i>
+                        <span>Sair</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="px-xl-3">
+                      <a href="../index.html" class="btn btn-block btn-secondary">
+                        <i class="fa fa-sign-out"></i>
+                        <span>Voltar para o menu</span>
+                      </a>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="card-title font-weight-bold">Suporte</h6>
+                    <p class="card-text">Obtenha ajuda rápida e gratuita utlizando a nossa ia! WoIN AI.</p>
+                    <button type="button" class="btn btn-primary">Contate-nos</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+        </div>
+
+        <script src="assets/js/scriptperfilF.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+        <script defer>
+
+
+          const firebaseConfig = {
+          apiKey: "AIzaSyA3gOHi9Q6aHQ5seN5S9bbNmQpPQFMGXFs",
+          authDomain: "magnus-c4b38.firebaseapp.com",
+          projectId: "magnus-c4b38",
+          storageBucket: "magnus-c4b38.appspot.com",
+          messagingSenderId: "458576341456",
+          appId: "1:458576341456:web:6117f4a9160b8667b8f1d5"
+          };
+
+
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          const db = firebase.firestore();
+
+          // let btn = document.getElementById("btnTst")
+
+
+          // btn.addEventListener("click", click)
+
+          
+
+          // function click() {
+          //     const db = firebase.firestore();
+
+          //     let profName = document.getElementById("profileName")
+          //     // profName.textContent = "A"
+          //     // console.log(profName)
+          //     firebase.auth().onAuthStateChanged(user => {
+          //     if (user) {
+          //         var usuariosLista = db.collection('users').doc(user.uid);
+
+          //         usuariosLista.get().then((doc) => {
+          //         if (doc.exists) {
+          //             const userData = doc.data()
+          //             const nome = userData.username
+
+          //             profName.textContent = nome
+
+          //             console.log("Document data:", doc.data());
+          //         } else {
+          //             // doc.data() will be undefined in this case
+          //             console.log("No such document!");
+          //         }
+          //     }).catch((error) => {
+          //         console.log("Error getting document:", error);
+          //     });
+
+          //         db.collection('users').doc(user.uid).set({
+          //             username: profName,
+          //         })
+          //     // Usuário está logado!
+          //     console.log("Usuário logado:", user.uid);
+          //     // Faça o que você precisa, por exemplo:
+          //     // - Redirecione para a página home
+          //     // - Exiba o nome do usuário
+          //     // - Habilite conteúdo restrito
+          //     } else {
+          //     // Usuário não está logado
+          //     console.log("Usuário não está logado.");
+          //     // Faça o que você precisa, por exemplo:
+          //     // - Redirecione para a página de login
+          //     // - Desabilite conteúdo restrito
+          //     }
+          // });
+          // }
+
+          // let page = document.getElementById("corpo")
+
+
+          // page.addEventListener("load", load)
+
+          let unlog = document.getElementById("unlog")
+
+          unlog.addEventListener("click", deslogar)
+
+
+          function deslogar() {
+               firebase.auth().signOut().then(() => {
+                   // Sign-out successful.
+                   console.log("Deslogado com sucesso!");
+                   window.location.href = "../index.html";
+                   }).catch((error) => {
+                       // An error happened.
+                       console.log("Erro ao deslogar:", error);
+                       });
+          }
+
+          function load() {
+
+            // var imagemPerfil = document.getElementById("profilePic")
+
+            // if (imagemPerfil.src === "") {
+            //   console.log("A")
+            // }
+
+              let unlog = document.getElementById("deslogar")
+              let profName = document.getElementById("profileName")
+              let profUser = document.getElementById("profileUser")
+
+              let profNamePlaceholder = document.getElementById("newName")
+
+              let profUserPlaceholder = document.getElementById("newUser")
+              let profEmailPlaceholder = document.getElementById("newEmail")
+              let profDescriptionPlaceholder = document.getElementById("newDescription")
+              let quandoEntrou = document.getElementById("quandoEntrou")
+              let deslogar = document.getElementById("deslogar")
+
+              let profPronounsPlaceholder = document.getElementById("newPronouns")
+              let profEtniaPlaceholder = document.getElementById("newEtnia")
+              let profCoursesPlaceholder = document.getElementById("newGraduatedCourses")
+              let profSkillsPlaceholder = document.getElementById("newSkills")
+              let profInterestsPlaceholder = document.getElementById("newInterests")
+              let profJobPlaceholder = document.getElementById("newJobTitle")
+              let profWorkCompanyPlaceholder = document.getElementById("newCompany")
+              let profWorkPeriodPlaceholder = document.getElementById("newJobPeriod")
+              let profWorkDescriptionPlaceholder = document.getElementById("newJobDescription")
+              let profLinkedinPlaceholder = document.getElementById("newLinkedinUrl")
+              let profGithubPlaceholder = document.getElementById("newGithubUrl")
+
+              let profGraduationLevel = document.getElementById("newGraduationLevel")
+
+              // profName.textContent = "A"
+              // console.log(profName)
+
+
+              firebase.auth().onAuthStateChanged(user => {
+              if (user) {
+
+                const userId = user.uid
+                const storageChild = firebase.storage().ref("user_photos/"+userId);
+                const storageChildBanner = firebase.storage().ref("user_banner/"+userId);
+
+                storageChild.list()
+                .then(result => {
+                  if (result.prefixes.length === 0 && result.items.length === 0) {
+                    console.log("A pasta está vazia!");
+
+                    var imagemPerfil = document.getElementById("profilePic")
+
+
+                        
+                    // var storageRef = firebase.storage().ref("user_photos/"+userId+"/"+fileName);
+
+
+                
+                
+                    
+
+                  } else {
+                    console.log("A pasta contém arquivos!");
+
+                    var imagemPerfil = document.getElementById("profilePic")
+
+                    imagemPerfil.style.display = "inline"
+
+
+                    var imagemPerfil = document.getElementById("profilePic")
+
+                    if (result.items.length > 0) {
+                    // Exclui o primeiro arquivo encontrado
+                    const itemRef = result.items[0];
+
+                    itemRef.getDownloadURL()
+                    .then((url)=>{
+                      imagemPerfil.style.backgroundImage = `url(${url})`
+                    })
+                    
+                    
+
+                    }
+                    
+
+                    
+                  }
+                })
+                
+                storageChildBanner.list()
+                .then(result => {
+                  if (result.prefixes.length === 0 && result.items.length === 0) {
+                    console.log("A pasta está vazia!");
+
+                    var userBanner = document.getElementById("userBanner")
+
+
+                        
+                    // var storageRef = firebase.storage().ref("user_photos/"+userId+"/"+fileName);
+
+
+                
+                
+                    
+
+                  } else {
+                    console.log("A pasta contém arquivos!");
+
+                    var userBanner = document.getElementById("userBanner")
+
+                    userBanner.style.display = "inline"
+
+
+                    var userBanner = document.getElementById("userBanner")
+
+                    if (result.items.length > 0) {
+                    // Exclui o primeiro arquivo encontrado
+                    const itemRef = result.items[0];
+
+                    itemRef.getDownloadURL()
+                    .then((url)=>{
+                      userBanner.style.backgroundImage = `url(${url})`
+                    })
+                    
+                    
+
+                    }
+                    
+
+                    
+                  }
+                })
+
+
+                  
+                  var usuariosLista = db.collection('users').doc(user.uid);
+
+                  usuariosLista.get().then((doc) => {
+                  if (doc.exists) {
+                      const userData = doc.data()
+                      const nome = userData.username
+                      const user = userData.user
+                      // const city = userData.city
+                      const description = userData.description
+                      const email = userData.emailContato
+
+                      const dia = userData.dia
+                      const mes = userData.mes
+                      const ano = userData.ano
+                      
+                      const pronouns = userData.pronouns
+                      const etnia = userData.etnia
+                      const graduatedCourses = userData.graduatedCourses
+                      const skills = userData.skills
+                      const interests = userData.interests
+                      const workJob = userData.workJob
+                      const workCompany = userData.workCompany
+                      const workPeriod = userData.workPeriod
+                      const workDescription = userData.workDescription
+                      const linkedinUrl = userData.linkedinUrl
+                      const githubUrl = userData.githubUrl
+
+                      const graduation = userData.graduation
+
+                      profName.textContent = nome
+
+                      profUser.textContent = "@" + user
+                      newUser.value = user
+
+
+                      profNamePlaceholder.value = nome
+                      profEmailPlaceholder.value = email
+                      profDescriptionPlaceholder.value = description
+
+                      profPronounsPlaceholder.value = pronouns
+                      profEtniaPlaceholder.value = etnia
+                      profCoursesPlaceholder.value = graduatedCourses
+                      profSkillsPlaceholder.value = skills
+                      profInterestsPlaceholder.value = interests
+                      profJobPlaceholder.value = workJob
+                      profWorkCompanyPlaceholder.value = workCompany
+                      profWorkPeriodPlaceholder.value = workPeriod
+                      profWorkDescriptionPlaceholder.value = workDescription
+                      profLinkedinPlaceholder.value = linkedinUrl
+                      profGithubPlaceholder.value = githubUrl
+
+                      profGraduationLevel.value = graduation
+
+
+
+
+                      quandoEntrou.textContent = "Entrou em " + dia + " de " + mes + " de " + ano
+                      
+
+                      // profCity.textContent = city
+
+                      // profEmail.textContent = email
+
+                      console.log("Document data:", doc.data());
+                  } else {
+                      // doc.data() will be undefined in this case
+                      console.log("No such document!");
+                  }
+              }).catch((error) => {
+                  console.log("Error getting document:", error);
+              });
+
+                  db.collection('users').doc(user.uid).set({
+                      username: profName,
+                  })
+              // Usuário está logado!
+              console.log("Usuário logado:", user.uid);
+              // Faça o que você precisa, por exemplo:
+              // - Redirecione para a página home
+              // - Exiba o nome do usuário
+              // - Habilite conteúdo restrito
+              } else {
+                  let login = document.getElementById("login")
+
+                  login.style.display = "inline"
+              // Usuário não está logado
+              console.log("Usuário não está logado.");
+              // Faça o que você precisa, por exemplo:
+              // - Redirecione para a página de login
+              // - Desabilite conteúdo restrito
+              }
+          });
+          }
+
+          
+          
+
+              
+
+      </script>
+
+      <!-- <script defer>
+
+      const changeButton = document.getElementById('ver-mais');
+      const imageFile = document.getElementById('inputImage');
+      const image = document.getElementById('profilePic');
+
+      imageFile.addEventListener('change', () => {
+          const file = imageFile.files[0];
+          const reader = new FileReader();
+        
+          reader.onload = (event) => {
+            image.src = event.target.result;
+            localStorage.imagem = event.target.result
+          };
+        
+          reader.readAsDataURL(file);
+
+          console.log(file.name)
+          
+
+
+          // var storageRef = firebase.storage().ref();
+          // var storage = firebase.storage()
+          // var storageRef = ref(storage)
+
+
+          // ref.put(file).then((snapshot) => {
+          //   console.log('Uploaded a blob or file!');
+          // });
+
+        });
+
+      </script> -->
+
+</body>
+</html>

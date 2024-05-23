@@ -1,0 +1,362 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*BASE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body{
+    background-image: url(https://www.chromethemer.com/download/hd-wallpapers/abstract-3d-3840x2160.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+#errorSpaceLogin {
+    margin-top: -8%;
+    font-size: 0.8rem;
+    color: #d13530;
+    font-weight: bold;
+}
+
+#errorSpaceRegister {
+    margin-top: -8%;
+    font-size: 0.8rem;
+    color: #d13530;
+    font-weight: bold;
+}
+
+/* Form container */
+.form-container{
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+}
+
+/*col 1*/
+.col-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: center;
+    flex-direction: column;
+    width: 55%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(30px);
+    border-radius: 0 30% 20% 0;
+    transition: border-radius .3s;
+}
+
+.image-layer{
+    position: relative;
+}
+
+.form-image-main{
+    width: 400px;
+}
+
+.form-image{
+    position: absolute;
+    left: 0;
+    width: 400px;
+}
+
+
+
+/* Animation */
+
+
+/* Featured Words*/
+.featured-words{
+    text-align: center;
+    color: #fff;
+    width: 300px;
+
+}
+.featured-words span{
+    font-weight: 600;
+    color: black;
+}
+
+/* col-2 */
+.col-2 {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    overflow: hidden;
+}
+.btn-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.btn {
+    font-weight: 500;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-1 {
+    background: #383a49;
+}
+.btn:hover {
+    opacity: 0.85;
+}
+/*   Login Form */
+.login-form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 4vw;
+    transition: .3s;
+}
+/*Register Form  */
+.register-form {
+    position: absolute;
+    left: -50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 4vw;
+    transition: .3s;
+}
+.register-form .form-title{
+    margin-block: 20px 20px;
+}
+.form-title {
+    margin: 30px 0;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+}
+.form-inputs {
+    width: 100%;
+}
+.input-box {
+    position: relative;
+}
+.input-field {
+    width: 100%;
+    height: 55px;
+    padding: 0 15px;
+    margin: 5px 0;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.2);
+}
+::placeholder {
+    color: #fff;
+    font-size: 15px;
+}
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.forgot-pass {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+.forgot-pass a {
+    color: #fff;
+    text-decoration: none;
+}
+.forgot-pass a:hover{
+    text-decoration: none;
+}
+.input-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 55px;
+    padding: 0 15px;
+    margin: 10px 0;
+    color: #fff;
+    background: #383a49;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .3s;
+}
+.input-submit:hover {
+    gap: 15px;
+}
+.social-login {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.social-login i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+}
+.social-login i:hover{
+    transform: scale(0.9);
+}
+
+.input-google {
+    display: flex;
+    position: absolute;
+    right: 45%;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+}
+.input-google:hover{
+    transform: scale(1.2);
+}
+
+#passwordShowLogin {
+    position: absolute;
+    color: #fff;
+    top: 30%;
+    font-size: 1.2rem;
+    right: 4%;
+}
+
+#passwordShowLogin:hover {
+    transition: 0.5s;
+    color: #383a49;
+}
+
+#passwordShowRegister {
+    position: absolute;
+    color: #fff;
+    top: 30%;
+    font-size: 1.2rem;
+    right: 4%;
+}
+
+#passwordShowRegister:hover {
+    transition: 0.5s;
+    color: #383a49;
+}
+
+#pessoaJuridica {
+    margin-top: -3.2%;
+}
+
+#souJuridica1 {
+    margin-top: 16%;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+/*Responsive  */
+@media (max-width: 892px) {
+    .form-container {
+      width: 400px;
+    }
+    .col-1 {
+      display: none;
+    }
+    .col-2 {
+      width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* caixa de data de nascimento
+
+  .data-container {
+      display: flex;
+      gap: 10px; 
+  }
+
+  .data-box {
+      width: 80px;
+      padding: 10px;
+      border: none; 
+      border-radius: 10px; 
+      background: rgba(255, 255, 255, 0.2); 
+      backdrop-filter: blur(20px); 
+      color: #fff; 
+      text-align: center; 
+      transition: 0.2s; 
+  }
+
+  .data-box:hover {
+      background: #383a49;
+  }
+
+  .data-input {
+      width: 100%;
+      padding: 0px 15px;
+      border: none; 
+      border-radius: 10px; 
+      background: transparent;
+      color: #fff; 
+  }
+
+  .data-box {
+    width: 100px;
+    height: 55px;
+    margin: 0 auto;}  */

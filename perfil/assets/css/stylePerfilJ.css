@@ -1,0 +1,156 @@
+.container{
+    margin-top: 20px;
+}
+
+#imageSelector {
+    position: absolute;
+    bottom: 30px;
+    max-height: 40px;
+    width: 145px;
+    left: 10px;
+}
+
+#ver-mais {
+    cursor: pointer;
+}
+
+#inputImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: transparent;
+    background-color: transparent;
+    display: none;
+}
+
+/* #profilePic {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background-position: center;
+    background-size: cover;
+
+} */
+
+#userBanner {
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/default-banner.jpg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#userBanner:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+#userBanner .bi-images {
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 3em; 
+    color: white;
+}
+#userBanner:hover .icon-galeria {
+    display: block; 
+}
+
+
+
+#userInfo {
+    margin-top: 80px;
+    padding-bottom: 60px;
+}
+
+#userData {
+    margin-top: 50px;
+    position: relative;
+}
+
+#profilePic {
+    width: 125px;
+    height: 125px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV2Z4Zw3b6ryZkZ2WG567Y5ECRxtkyQCPAlOVGRxVCGRMN6iyFFF41vtytvq21qXHIksI&usqp=CAU");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; 
+
+    /* efeito de fosco */
+
+    background: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(10px); 
+}
+
+.card-body {
+    background-color: transparent; 
+    padding: 20px;
+
+
+    transition: transform 0.3s ease;
+
+
+  
+    background: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(10px); 
+}
+
+/* animacao teste */
+
+#userData .btn.btn-primary {
+    margin-top: 10px; 
+    display: block; 
+  }
+  
+  .col-12.col-sm-auto.mb-3 {
+    text-align: center;
+  }
+
+  
+.container {
+    margin-top: 20px;
+  }
+  
+  /* ... outros estilos ... */
+
+  
+  @media (max-width: 768px) { 
+    #userData {
+      flex-direction: column; 
+      align-items: center;  
+      margin-top: 50px;  
+    }
+  
+    #imageSelector {
+      position: relative; 
+      width: auto; 
+      margin-top: px; 
+      margin-left: -15px;
+    }
+  
+    #userInfo {
+      margin-top: -10px;
+      text-align: center;
+    }
+  }
